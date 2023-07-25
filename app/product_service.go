@@ -13,16 +13,18 @@ func (s *ProductService) Get(id string) (ProductInterface, error) {
 }
 
 func (s *ProductService) Create(name string, price float64) (ProductInterface, error) {
+	println(name)
+	println(price)
 	product := NewProduct()
 	product.Name = name
 	product.Price = price
 	_, err := product.IsValid()
 	if err != nil {
-		return &Product{}, nil
+		return &Product{}, err
 	}
 	result, err := s.Persistence.Save(product)
 	if err != nil {
-		return &Product{}, nil
+		return &Product{}, err
 	}
 	return result, nil
 }

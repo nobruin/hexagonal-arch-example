@@ -2,11 +2,12 @@ package database_test
 
 import (
 	"database/sql"
-	"github.com/nobruin/hexagonal-arch-example/adpters/database"
-	"github.com/nobruin/hexagonal-arch-example/app"
-	"github.com/stretchr/testify/require"
 	"log"
 	"testing"
+
+	"github.com/nobruin/hexagonal-arch-example/adapters/database"
+	"github.com/nobruin/hexagonal-arch-example/app"
+	"github.com/stretchr/testify/require"
 )
 
 var Db *sql.DB

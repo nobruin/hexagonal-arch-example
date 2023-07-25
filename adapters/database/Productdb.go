@@ -32,12 +32,12 @@ func (p *ProductDB) Get(id string) (app.ProductInterface, error) {
 func (p *ProductDB) Save(product app.ProductInterface) (app.ProductInterface, error) {
 
 	if p.exists(product.GetID()) {
-		_, err := p.create(product)
+		_, err := p.update(product)
 		if err != nil {
 			return nil, err
 		}
 	} else {
-		_, err := p.update(product)
+		_, err := p.create(product)
 		if err != nil {
 			return nil, err
 		}
