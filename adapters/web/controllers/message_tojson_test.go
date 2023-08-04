@@ -7,6 +7,6 @@ import (
 
 func TestHandler_jsonError(t *testing.T) {
 	msg := "Hello Json"
-	result := stringToJson(msg)
+	result := messageToJson(msg)
 	require.Equal(t, `{"message":"Hello Json"}`, string(result))
 }

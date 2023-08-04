@@ -2,7 +2,7 @@ package controllers
 
 import "encoding/json"
 
-func stringToJson(msg string) []byte {
+func messageToJson(msg string) []byte {
 	message := struct {
 		Message string `json:"message"`
 	}{
