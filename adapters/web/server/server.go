@@ -1,14 +1,15 @@
 package server
 
 import (
-	"github.com/codegangsta/negroni"
-	"github.com/gorilla/mux"
-	"github.com/nobruin/hexagonal-arch-example/adapters/web/controllers"
-	"github.com/nobruin/hexagonal-arch-example/app"
 	"log"
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/codegangsta/negroni"
+	"github.com/gorilla/mux"
+	"github.com/nobruin/hexagonal-arch-example/adapters/web/controllers"
+	"github.com/nobruin/hexagonal-arch-example/app"
 )
 
 type Webserver struct {
